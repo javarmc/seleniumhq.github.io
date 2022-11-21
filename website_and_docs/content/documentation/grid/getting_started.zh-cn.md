@@ -20,32 +20,30 @@ aliases: [
 </p>
 {{% /pageinfo %}}
 
-## Quick start
+## 快速起步
 
-1. Prerequisites
-    * Java 11 or higher installed
-    * Browser(s) installed
-    * Browser driver(s)
-      * If using Selenium 4.6, Selenium Manager will configure the drivers for Chrome, Firefox, and Edge [if they are not found on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
-      * [Installed and on the `PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
-    * Download the Selenium Server jar file from the [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
-1. Start the Grid
+1. 开始必备
+    * Java 11 或者更高版本
+    * 安装浏览器
+    * 浏览器驱动（webdriver）
+      * 如果使用Selenium 4.6, Selenium Manager 将会为Chrome, Firefox, and Edge 配置驱动[如果在环境变量`PATH`中没有的话。]({{< ref "../webdriver/getting_started/install_drivers.md#1-selenium-manager-beta" >}}).
+      * [安装并配置环境变量`PATH`]({{< ref "../webdriver/getting_started/install_drivers.md#3-the-path-environment-variable" >}})
+    * 下载 Selenium Server jar 文件： [latest release](https://github.com/SeleniumHQ/selenium/releases/latest)
+1. 启动Grid
     * `java -jar selenium-server-<version>.jar standalone`
-1. Point* your WebDriver tests to [http://localhost:4444](http://localhost:4444)
-1. (Optional) Check running tests and available capabilities by opening your browser at [http://localhost:4444](http://localhost:4444)
+1. Point* 将测试的WebDriver指向[http://localhost:4444](http://localhost:4444)
+1. (可选) 用浏览器打开[http://localhost:4444](http://localhost:4444)来检查测试运行情况和可能的其他操作。
 
-*Wondering how to point your tests to [http://localhost:4444](http://localhost:4444)? 
-Check the [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
+*怎样把测试指向[http://localhost:4444](http://localhost:4444)? 
+查看 [`RemoteWebDriver` section]({{< ref "../webdriver/drivers/#remote-webdriver" >}}).
 
-To learn more about the different configuration options, go through the sections below.
+要了解不同的配置，参考下面的章节。
 
 ## Grid roles
 
-Grid is composed by six different [components]({{< ref "components.md" >}}), which gives
-you the option to deploy it in different ways.
+Grid由6个不同的部件构成[components]({{< ref "components.md" >}}),他们提供了不同的选项来实现不同的部署方式。
 
-Depending on your needs, you can start each one of them on its own (Distributed), group
-them in Hub & Node, or all in one on a single machine (Standalone).
+根据你的需求，你可以启动他们其中的一个（Distributed）、集中到Hub & Node中启动、或者单独一台机器上启动。
 
 ### Standalone
 
